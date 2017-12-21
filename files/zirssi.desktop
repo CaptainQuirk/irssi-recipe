@@ -1,0 +1,9 @@
+[ Entry]
+
+Type=Application
+Version=1.0
+Name=zirssi
+Comment=Terminal wrapper around irssi
+Path=/home/leonard/.irssi
+Exec=gnome-terminal -e "irssi"
+Icon=/home/leonard/Pictures/configuration/irssi.jpg

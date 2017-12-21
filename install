@@ -1,0 +1,22 @@
+#!"/bin/bash
+
+CONFIG_SRC_DIR=$HOME/Documents/configuration/src
+IRSSI_RECIPE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+if [ ! -d $CONFIG_SRC_DIR/.irssi ]; then
+    git clone https://github.com/CaptainQuirk/.irssi.git $CONFIG_SRC_DIR/.irssi
+    mkdir -p $HOME/.irssi
+    ln -s $CONFIG_SRC_DIR/.irssi/config $HOME/.irssi/config
+fi
+
+cd $CONFIG_SRC_DIR/.irssi
+git pull
+cd -
+
+brew install irssi
+
+mkdir -p $HOME/Pictures/configuration
+cp --update $IRSSI_RECIPE_DIR/files/zirssi.jpg $HOME/Pictures/configuration
+
+cp --update $IRSSI_RECIPE_DIR/files/zirssi.desktop $HOME/.local/share/applications/zirssi.desktop
+
