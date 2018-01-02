@@ -1,4 +1,4 @@
-#!"/bin/bash
+#!/bin/bash
 
 CONFIG_SRC_DIR=$HOME/Documents/configuration/src
 IRSSI_RECIPE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
