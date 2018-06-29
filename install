@@ -13,7 +13,7 @@ cd $CONFIG_SRC_DIR/.irssi
 git pull
 cd -
 
-brew install irssi
+shef brew irssi
 
 mkdir -p $HOME/Pictures/configuration
 cp --update $IRSSI_RECIPE_DIR/files/zirssi.jpg $HOME/Pictures/configuration
