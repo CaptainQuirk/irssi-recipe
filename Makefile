@@ -1,4 +1,4 @@
-install:
-		/bin/bash install
+i@nstall:
+		@/bin/bash install
 
 .PHONY: install
