@@ -1,0 +1,31 @@
+git "Retrieving irssi configuration"; do
+    repository "https://github.com/CaptainQuirk/.irssi.git"
+    destination "$CONFIG_SRC_DIR/.irssi"
+    enable-submodules true
+done
+
+directory "Creating home directory"; do
+    path "$HOME/.irssi"
+done
+
+link "Symlinking irssi configuration file"; do
+    target "$CONFIG_SRC_DIR/.irssi/config"
+    to "$HOME/.irssi/config"
+    force true
+done
+
+brew irssi
+
+file "Copying icon for irssi"; do
+    source "$RECIPE_DIR/files/zirssi.jpg"
+    path "$HOME/.local/share/icons/zirssi.jpg"
+    update true
+done
+
+file "Copying .desktop file for irssi"; do
+    source "$RECIPE_DIR/files/zirssi.desktop"
+    path "$HOME/.local/share/applications/zirssi.desktop"
+    update true
+done
+
+

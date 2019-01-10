@@ -6,4 +6,4 @@ Name=zirssi
 Comment=Terminal wrapper around irssi
 Path=/home/leonard/.irssi
 Exec=gnome-terminal -e "irssi"
-Icon=/home/leonard/Pictures/configuration/irssi.jpg
+Icon=/home/leonard/.local/share/icons/irssi.jpg
