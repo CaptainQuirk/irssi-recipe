@@ -16,7 +16,7 @@ done
 
 brew "Installing irssi"; do
     package irssi
-    flags "--without-perl"
+    flags "--with-perl=no"
 done
 
 file "Copying icon for irssi"; do
