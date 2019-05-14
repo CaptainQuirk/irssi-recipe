@@ -14,10 +14,8 @@ link "Symlinking irssi configuration file"; do
     force true
 done
 
-brew "Installing irssi"; do
-    package irssi
-    flags "--with-perl=no"
-done
+brew perl
+brew irssi
 
 file "Copying icon for irssi"; do
     source "$RECIPE_DIR/files/zirssi.jpg"
